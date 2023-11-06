@@ -1,8 +1,8 @@
-# # [배포 시에만] chromadb의 sqlite3 버전 문제 해결 
-# # requirements.txt 에 pysqlite3-binary 추가
-# __import__('pysqlite3')
-# import sys
-# sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+# [배포 시에만] chromadb의 sqlite3 버전 문제 해결 
+# requirements.txt 에 pysqlite3-binary 추가
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 # proto7 : 통계-ai ver2
 # 대화 history가 저장되고,
