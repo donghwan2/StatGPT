@@ -35,7 +35,7 @@ st.markdown("# StatGPT-1.0(beta)")
 
 # 모델 초기화 with st.session_state
 if "openai_model" not in st.session_state:
-    st.session_state["openai_model"] = "gpt-4-1106-preview"         # LLM 모델 설정 : "gpt-3.5-turbo", "gpt-4", "gpt-4-1106-preview"
+    st.session_state["openai_model"] = "gpt-3.5-turbo"         # LLM 모델 설정 : "gpt-3.5-turbo", "gpt-4", "gpt-4-1106-preview"
 
 # 대화 초기화 with st.session_state
 if "messages" not in st.session_state:
