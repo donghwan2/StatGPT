@@ -28,7 +28,7 @@ from langchain.vectorstores import Chroma
 
 
 ### ★★★ 헤드 ★★★
-st.markdown("# StatGPT(beta)")
+st.markdown("# StatGPT-1.0(beta)")
 
 
 ### st.session_state에 대화 내용 저장
