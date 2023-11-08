@@ -23,6 +23,7 @@ from langchain.chains import RetrievalQA
 from langchain.document_loaders import TextLoader
 from langchain.document_loaders import DirectoryLoader
 from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain.embeddings.sentence_transformer import SentenceTransformerEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import Chroma
 
@@ -61,7 +62,8 @@ texts = text_splitter.split_documents(documents)
 persist_directory = 'db'
 
 # 임베딩
-embedding = OpenAIEmbeddings()
+embedding = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
+# embedding = OpenAIEmbeddings()
 
 # db에 임베딩된 데이터 저장
 db = Chroma.from_documents(
